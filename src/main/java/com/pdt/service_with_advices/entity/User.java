@@ -18,11 +18,15 @@ public class User {
     @Id
     @GeneratedValue
     @Column(name = "USR_ID")
-    private int id;
+    private Long id;
     @NotEmpty
     @Size(max = 50, message = "Name can have up to 50 signs")
     @Column(name = "USR_NAME")
-    private String name;
-
-
+    private String username;
+    @NotEmpty
+    @Column(name = "USR_EMAIL")
+    private String email;
+    @NotEmpty
+    @Column(name = "USR_PASSWORD")
+    private String password;
 }
